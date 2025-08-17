@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabe Zigo - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #E5E5E5; }
+        .aurora-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: radial-gradient(circle at 10% 20%, rgba(100, 116, 139, 0.2), transparent 50%),
+                        radial-gradient(circle at 80% 90%, rgba(59, 130, 246, 0.15), transparent 50%);
+            animation: move 20s infinite alternate;
+        }
+        @keyframes move { from { transform: translate(-50px, -50px); } to { transform: translate(50px, 50px); } }
+        .glass {
+            background-color: rgba(17, 24, 39, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+        .click-indicator { opacity: 0; transition: opacity 0.3s ease; }
+        .glass:hover .click-indicator { opacity: 1; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="aurora-bg"></div>
+
+    <header class="fixed top-4 left-4 right-4 z-20">
+        <div class="glass container mx-auto flex justify-between items-center p-3 rounded-xl">
+            <a href="#" class="text-sm font-medium">Gabe Zigo</a>
+            <a href="#footer" class="text-xs bg-white text-black font-medium px-4 py-2 rounded-lg hover:opacity-80 transition">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <section class="min-h-screen flex items-center justify-center text-center">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter">Designing Digital<br>Experiences.</h1>
+                <p class="mt-4 text-lg text-white/70">Front-End Developer & Web Designer</p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-24 grid md:grid-cols-2 gap-8">
+            <a href="https://gabezigo.github.io/DigitalDesign/" target="_blank" class="glass rounded-2xl aspect-video p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold">DigitalDesign</h3>
+                    <p class="text-sm text-white/60 mt-1">A modern portfolio template for creatives.</p>
+                </div>
+                <span class="click-indicator self-end font-bold text-2xl">&rarr;</span>
+            </a>
+            <a href="https://gabezigo.github.io/StellerTech/" target="_blank" class="glass rounded-2xl aspect-video p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold">StellerTech</h3>
+                    <p class="text-sm text-white/60 mt-1">A sleek landing page for a tech startup.</p>
+                </div>
+                <span class="click-indicator self-end font-bold text-2xl">&rarr;</span>
+            </a>
+        </section>
+    </main>
+
+    <footer id="footer" class="py-16 text-center">
+        <h2 class="text-2xl font-bold tracking-tighter">Let's collaborate.</h2>
+        <div class="mt-4 flex justify-center items-center space-x-6">
+            <a href="mailto:gabezigo@gmail.com" class="text-gray-400 hover:text-white">gabezigo@gmail.com</a>
+            <span class="text-gray-600">&bull;</span>
+            <a href="https://gabezigo.github.io/Portfolio/" target="_blank" class="text-gray-400 hover:text-white">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
